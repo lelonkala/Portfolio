@@ -1,86 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Profile</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-</head>
-<body>
-    <header style="background-image: url('/static/image1_0.jpg'); background-position: center; padding-bottom: 230px;">
+{% extends "navigationBar.html" %}
 
-        <h1>Nombulelo Prudence Nkala</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block title %} Home-My profile{% endblock%}
 
-    <section id="about">
-        <div class="container">
-            <div class="profile-picture">
-                <img src="{{ url_for('static', filename='picture.jpg') }}" alt="Profile Picture">
-            </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    Meet Nombulelo, a final year student at <a href="https://www.tut.ac.za">Tshwane University of Technology</a>, diving into the world of software development with gusto. Coming from the lively neighborhood of Khutsong Extension 2, affectionately known as "Skopas," I bring a mix of city energy and family warmth to everything I do. Family means the world to me, and I cherish the close-knit bond with my siblings and caring dad, finding endless inspiration in my love for my daughter, who lights up my life.<br>
+{% block content %}
 
-                    But there's more to Nombulelo than just textbooks and code. I am a ray of sunshine, spreading joy wherever I go. I find strength in my spirituality, I take moments to connect with my God, and when it's game time, you'll catch me cheering on my favorite soccer teams, soaking in the thrill of the match.<br>
-                    
-                    Started my journey as a tech whiz at 5AS IT Group Company in Pretoria North, I am now exploring new horizons as an intern at Capaciti in Braamfontein, diving deep into the world of software development.
-                    
-                    And when I'm not coding away, you'll likely find me indulging in my love for good food. From juicy burgers to cheesy pizza and everything in between, my taste buds are as diverse as my interests.<br> With my infectious laughter and zest for life, Nombulelo effortlessly combines her passions for technology, family, spirituality, and the simple joys of life, making her someone you'd love to have around. 	
-                </p>
-            </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+            <h1>Welcome to My Personal Website!</h1>
+            <p class="lead mt-4">Hello! I'm Nombulelo, a Full-stack developer. This is my personal website where you can learn more about my work, interests, and projects. Explore my site to discover my journey, achievements, and what drives me.</p>
+            <p class="lead mt-4">Feel free to get in touch if you'd like to collaborate, ask a question, or just say hi!</p>
+            <a href="{{ url_for('about') }}" class="btn btn-primary mt-3">Learn More About Me</a>
         </div>
-    </section>
+    </div>
+</div>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <p>
-               <ul class="list-inline">
-                    <li><i class="fa-solid fa-building-columns"></i> Tshwane University of Technology<br>Software development</li>
-               </ul>
-            </p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>
-                Email: lelonkalanp@gmail.com<br>
-                Phone: 123-456-7890<br>
-                Address: Currently located in Protea Glen, Soweto<br>
-            </p>
-        </div>
-    </section>
+{% endblock %}
 
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4>Follow Me:</h4>
-                    <ul class="list-inline social-icons">
-                        <li class="list-inline-item"><a href="https://www.facebook.com/nombulelonkala.prudencenombux"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <script src="https://kit.fontawesome.com/fc9b1a2cb5.js" crossorigin="anonymous"></script>
-</body>
-</html>

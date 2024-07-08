@@ -1,22 +1,103 @@
 {%extends "navigationBar.html"%}
 
 {%block content%}
+<head>
 <link rel="stylesheet" href="/static/about.css">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
 
 <div class="about">
 
+    <section id="about">
+        <div class="about-container">
+            <div class="profile-picture">
+                <img src="{{ url_for('static', filename='picture.jpg') }}" alt="Profile Picture">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Meet Nombulelo, a final year student at <a href="https://www.tut.ac.za">Tshwane University of Technology</a>, diving into the world of software development with gusto. Coming from the lively neighborhood of Khutsong Extension 2, affectionately known as "Skopas," I bring a mix of city energy and family warmth to everything I do. Family means the world to me, and I cherish the close-knit bond with my siblings and caring dad, finding endless inspiration in my love for my daughter, who lights up my life.<br>
 
-    <h1>
-        Nombulelo Prudence Nkala
-    </h1>
-    <p>
-        All about me:<br>
-        Birthday: 20 November <br>
-        Age: 25 <br>
-        Home ground: Khutsong, Carletonville <br>
-        Highschool: Carleton Jones Highschool <br>
-        Tertiary: Tshwane University of Technology <br>
-    </p>
+                    But there's more to Nombulelo than just textbooks and code. I am a ray of sunshine, spreading joy wherever I go. I find strength in my spirituality, I take moments to connect with my God, and when it's game time, you'll catch me cheering on my favorite soccer teams, soaking in the thrill of the match.<br>
+                    
+                    Started my journey as a tech whiz at 5AS IT Group Company in Pretoria North, I am now exploring new horizons as an intern at Capaciti in Braamfontein, diving deep into the world of software development.
+                    
+                    And when I'm not coding away, you'll likely find me indulging in my love for good food. From juicy burgers to cheesy pizza and everything in between, my taste buds are as diverse as my interests.<br> With my infectious laughter and zest for life, Nombulelo effortlessly combines her passions for technology, family, spirituality, and the simple joys of life, making her someone you'd love to have around. 	
+                </p>
+            </div>
+        </div>
+    </section>
+    
+   <!-- Fun Facts with Icons -->
+ <!-- Fun Facts Section -->
+ <section id="fun-facts" class="mt-4">
+    <div class="container">
+        <h3 class="text-center mb-4">Fun Facts</h3>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-birthday-cake fa-2x mb-3"></i>
+                        <h5 class="card-title">Birthday</h5>
+                        <p class="card-text">20 November</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fa-solid fa-user fa-2x mb-3"></i>
+                        <h5 class="card-title">Age</h5>
+                        <p class="card-text">25</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-home fa-2x mb-3"></i>
+                        <h5 class="card-title">Home Ground</h5>
+                        <p class="card-text">Khutsong, Carletonville</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-school fa-2x mb-3"></i>
+                        <h5 class="card-title">High School</h5>
+                        <p class="card-text">Carleton Jones High School</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-graduation-cap fa-2x mb-3"></i>
+                        <h5 class="card-title">Tertiary</h5>
+                        <p class="card-text">Tshwane University of Technology</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-futbol fa-2x mb-3"></i>
+                        <h5 class="card-title">Favorite Sport</h5>
+                        <p class="card-text">Hockey and Soccer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</div>
+</div>
 
 </div>
+
 {%endblock%}
