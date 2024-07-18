@@ -28,18 +28,24 @@ nav ul li a {
     text-decoration: none;
 }
 
+.about{
+    padding-bottom: 50px;
+}
 .about-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Align items at the top */
     max-width: 800px; /* Set max width for the container */
-    margin: auto; /* Center the container */
+    margin-bottom: auto; /* Center the container */
     padding-top: 20px;
 }
 .about-text h2{
-    font-family: monospace;
+    font-family: 'Rocher';
+    base-palette: 9;
     text-decoration: underline solid;
     text-align: center;
+    color: 	chocolate;
+    padding-top: 5px;
 
 }
 
@@ -61,8 +67,54 @@ nav ul li a {
 .about-text {
     flex: 2;
     font-size: 16px; /* Adjust font size if needed */
+    text-decoration: none;
 }
 
+#fun-facts{
+    margin-top: 50px;
+}
+
+.fact-container{
+    margin-top: 50px;
+    position: relative;
+}
+
+
+.text {
+	font-family: "Yanone Kaffeesatz";
+	font-size: 100px;
+	display: flex;
+	position: absolute;
+	bottom: 20vh;
+	left: 50%;
+	transform: translateX(-50%);
+	user-select: none;
+    padding-bottom: 45px;
+
+	.wrapper {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 20px;
+		.letter {
+			transition: ease-out 1s;
+			transform: translateY(40%);
+		}
+		.shadow {
+			transform: scale(1, -1);
+			color: #999;
+			transition: ease-in 5s, ease-out 5s;
+		}
+		&:hover {
+			.letter {
+				transform: translateY(-200%);
+			}
+			.shadow {
+				opacity: 0;
+				transform: translateY(200%);
+			}
+		}
+	}
+}
 
 .card {
     border-radius: 10px; /* Add rounded corners to cards */
@@ -83,7 +135,12 @@ nav ul li a {
     font-size: 1rem;
 }
 
+/*responsiveness*/
+
 @media (max-width: 768px) {
+    .about{
+        padding-bottom: 40px;
+    }
     .about-container {
         flex-direction: column; /* Stack items on smaller screens */
         align-items: center; /* Center align everything */
