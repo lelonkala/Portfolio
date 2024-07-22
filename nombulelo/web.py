@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from models import db, Contact
+from models.models import db, Contact
 
 web = Flask(__name__)
 

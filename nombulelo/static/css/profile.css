@@ -1,0 +1,10 @@
+.container{
+    background-image: url('../image1_0.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-bottom: 10px;
+    background-position: top;
+    opacity: 75%;
+}
+
+

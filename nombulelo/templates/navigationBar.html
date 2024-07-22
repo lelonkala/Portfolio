@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
+    <link rel="stylesheet" href="/static/css/profile.css">
     <!--Bootstrap css-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="nav.css" rel="stylesheet">
+    <link href="/static/css/nav.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/fc9b1a2cb5.js" crossorigin="anonymous"></script>
     
@@ -47,7 +48,27 @@
 
 
 
+    {% block footer %}
 
+    <footer class="bg-light text-center text-lg-start">
+    
+               
+    
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="socials">
+                <h3> My Social Links:
+                <ul class="my-socials">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+            &copy; 2024 Nombulelo Prudence Nkala
+        </div>
+    </footer>
+    
+    {% endblock %}
 
 
 
