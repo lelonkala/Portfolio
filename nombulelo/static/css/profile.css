@@ -7,13 +7,17 @@ body {
 
 .mt-5{
     display: flex;
-    background-image: url('../image1_0.jpg');
+    background-image: url('../Nombulelo\ Nkala.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     margin-bottom: 10px;
     background-position: top;
     opacity: 75%;
+    height: 282px;
+}
+a.btn.btn-primary.mt-3{
+    background-color: #edc4a8;
 }
 
 .container1{
