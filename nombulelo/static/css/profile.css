@@ -23,6 +23,8 @@ body {
 .contact-me{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 h2, p{

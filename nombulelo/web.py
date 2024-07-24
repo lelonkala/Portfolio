@@ -1,15 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for
-from models.models import db, Contact
+from Contacts import db, Contact
 
 web = Flask(__name__)
 
 # Database configuration
-web.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///contacts.db'
+web.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///contact.db'
 web.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(web)
 with web.app_context():
     db.create_all()
+
 
 #home page route
 @web.route('/')
@@ -25,21 +26,26 @@ def contact():
 @web.route('/submit_contact_form', methods=['POST'])
 def submit_contact_form():
     
+    if request.method == 'POST':
+        name = request.form['name']
+        surname = request.form['surname']
+        email = request.form['email']
+        contact_number = request.form['contact_number']
+        message = request.form['message']
+        
+    if not name or not email or not message:
+        return "All fields are required!"
+    
+#new instance 
     new_contact = Contact(
-        first_name=first_name,
-        last_name=last_name,
-        email=email,
-        phone=phone,
-        message=message
+        name = name,
+        surname = surname,
+        email = email,
+        contact_number = contact_number,
+        message = message
     )
     
-    first_name = request.form['first_name']
-    last_name = request.form['last_name']
-    email = request.form['email']
-    phone = request.form['phone']
-    message = request.form['message']
-    
-    # Process the form data
+ # Process the form data
     db.session.add(new_contact)
     db.session.commit()
     return redirect(url_for('home'))
