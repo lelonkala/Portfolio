@@ -1,11 +1,9 @@
 {% extends "navigationBar.html" %}
 
-{% block title %} Home-My profile{% endblock%}
-
+{% block title %} Home - My Profile {% endblock %}
 
 {% block content %}
-
-<div class="container mt-5" >
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-8 mx-auto text-center">
             <h1>Welcome to My Personal Website!</h1>
@@ -16,14 +14,43 @@
     </div>
 </div>
 
-<div class="contact me">
-    <div class="my-contact-form">
-        
-    </div>
-</div>
-
+        <!-- Contact form content here -->
+         <div class="contact-me">
+         <h2>Contact Me</h2>
+         <p>Feel free to get in touch if you'd like to collaborate, ask a question, or just say hi!</p>
+         </div>
+        <div class="form-wrapper">
+            <form action="{{ url_for('submit_contact_form') }}" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="surname">Surname</label>
+                        <input type="text" class="form-control" id="surname" name="surname" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="contact_number">Contact Number</label>
+                        <input type="text" class="form-control" id="contact_number" name="contact_number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
 
 {% endblock %}
-<!--contact form-->
 
-
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
